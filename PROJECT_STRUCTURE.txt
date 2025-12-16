@@ -1,0 +1,107 @@
+ELECTION RESULT AGGREGATOR - PROJECT STRUCTURE
+===============================================
+
+PROJECT FILES (18 total)
+------------------------
+
+ENTITIES (2 files)
+  BoothResult.java              - Booth-level election result entity
+  ConstituencySummary.java      - Constituency summary with Builder pattern
+
+VALIDATION (5 files)
+  Rule.java                     - Validation rule interface
+  AbstractRule.java             - Base class for Chain of Responsibility
+  DuplicateBoothRule.java       - Detects duplicate booth-party entries
+  NegativeValueRule.java        - Validates non-negative values
+  OvervotingRule.java           - Detects votes > registered voters
+
+AGGREGATION (4 files)
+  AggregationJob.java           - Abstract base (Template Method pattern)
+  StandardAggregationJob.java   - Concrete aggregation implementation
+  TieBreakPolicy.java           - Strategy interface for tie-breaking
+  AlphabeticalTieBreak.java     - Alphabetical tie-break strategy
+
+FILE I/O (2 files)
+  VoteFileReader.java           - CSV reader for booth results
+  ReportWriter.java             - Exports summaries, winners, audit logs
+
+CLI (1 file)
+  ElectionCLI.java              - Interactive command-line interface
+
+EXCEPTIONS (2 files)
+  DuplicateBoothEntryException.java  - Duplicate booth-party exception
+  MalformedVoteRowException.java     - CSV parsing exception
+
+DATA FILES (2 files)
+  votes.csv                     - Sample election data (33 booth results)
+  votes_duplicate.csv           - Test file with duplicates
+
+QUICK START
+-----------
+1. javac *.java
+2. java ElectionCLI
+3. Type: load votes.csv
+4. Type: aggregate
+5. Type: winners
+6. Type: export
+7. Check: constituency_summary.csv, winners.txt, audit.txt
+
+DESIGN PATTERNS USED
+--------------------
+✓ Builder Pattern              - ConstituencySummary construction
+✓ Chain of Responsibility      - Validation rule chaining
+✓ Strategy Pattern             - Pluggable tie-break policies
+✓ Template Method              - AggregationJob workflow
+
+KEY INTERFACES
+--------------
+Rule                  - Validation rule contract
+TieBreakPolicy        - Tie-breaking strategy contract
+
+KEY ABSTRACT CLASSES
+--------------------
+AbstractRule          - Base for validation rules
+AggregationJob        - Base for aggregation jobs
+
+COLLECTIONS USAGE
+-----------------
+Map<String, Map<String, Integer>>  - Nested maps for vote aggregation
+Set<String>                        - Duplicate detection
+List<BoothResult>                  - Booth results storage
+Stream API                         - Grouping, sorting, ranking
+
+MATH/QUANT OPERATIONS
+---------------------
+Turnout    = (Σ votes / Σ registered) × 100
+Margin     = Winner votes - Runner-up votes
+Ranking    = Sort by votes DESC, then by party name ASC
+Summation  = Map.merge() for iterative vote aggregation
+
+CLI COMMANDS
+------------
+load <file>   - Load CSV data
+aggregate     - Process and validate data
+winners       - Display results
+export        - Write output files
+help          - Show commands
+exit          - Quit application
+
+OUTPUT FILES
+------------
+constituency_summary.csv  - Detailed per-party results by constituency
+winners.txt              - Formatted winners report
+audit.txt                - Validation and processing log (append mode)
+
+ERROR HANDLING
+--------------
+✓ File not found
+✓ Malformed CSV rows
+✓ Duplicate booth-party entries
+✓ Negative values
+✓ Overvoting detection
+✓ Invalid number formats
+
+TESTING
+-------
+Normal case:          load votes.csv
+Duplicate detection:  load votes_duplicate.csv (should fail during aggregate)

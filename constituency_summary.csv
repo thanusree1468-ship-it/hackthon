@@ -1,0 +1,16 @@
+constituency,party,votes,total_votes,registered,turnout,winner,margin
+South District,Party C,1700,9320,6000,155.33,Party A,480
+South District,Party B,3570,9320,6000,155.33,Party A,480
+South District,Party A,4050,9320,6000,155.33,Party A,480
+Central District,Party C,3550,11850,7000,169.29,Party A,300
+Central District,Party B,4000,11850,7000,169.29,Party A,300
+Central District,Party A,4300,11850,7000,169.29,Party A,300
+East District,Party C,2150,8550,5200,164.42,Party B,500
+East District,Party B,3450,8550,5200,164.42,Party B,500
+East District,Party A,2950,8550,5200,164.42,Party B,500
+West District,Party C,1810,6160,4000,154.00,Party B,290
+West District,Party B,2320,6160,4000,154.00,Party B,290
+West District,Party A,2030,6160,4000,154.00,Party B,290
+North District,Party C,1250,7620,5000,152.40,Party A,110
+North District,Party B,3130,7620,5000,152.40,Party A,110
+North District,Party A,3240,7620,5000,152.40,Party A,110

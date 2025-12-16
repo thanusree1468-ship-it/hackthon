@@ -1,0 +1,36 @@
+==========================================
+    ELECTION WINNERS REPORT
+==========================================
+
+Constituency: Central District
+  Winner: Party A (4,300 votes)
+  Runner-up: Party B (4,000 votes)
+  Margin: 300 votes
+  Turnout: 169.29% (11,850 / 7,000)
+
+Constituency: East District
+  Winner: Party B (3,450 votes)
+  Runner-up: Party A (2,950 votes)
+  Margin: 500 votes
+  Turnout: 164.42% (8,550 / 5,200)
+
+Constituency: North District
+  Winner: Party A (3,240 votes)
+  Runner-up: Party B (3,130 votes)
+  Margin: 110 votes
+  Turnout: 152.40% (7,620 / 5,000)
+
+Constituency: South District
+  Winner: Party A (4,050 votes)
+  Runner-up: Party B (3,570 votes)
+  Margin: 480 votes
+  Turnout: 155.33% (9,320 / 6,000)
+
+Constituency: West District
+  Winner: Party B (2,320 votes)
+  Runner-up: Party A (2,030 votes)
+  Margin: 290 votes
+  Turnout: 154.00% (6,160 / 4,000)
+
+==========================================
+Total Constituencies: 5

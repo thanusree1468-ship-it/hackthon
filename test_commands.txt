@@ -1,0 +1,5 @@
+load votes.csv
+aggregate
+winners
+export
+exit
